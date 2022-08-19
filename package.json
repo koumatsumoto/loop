@@ -24,6 +24,9 @@
     "url": "https://github.com/koumatsumoto/loop/issues"
   },
   "homepage": "https://github.com/koumatsumoto/loop#readme",
+  "dependencies": {
+    "remeda": "^1.0.1"
+  },
   "devDependencies": {
     "@tsconfig/node18-strictest": "^1.0.0",
     "husky": "^8.0.1",
