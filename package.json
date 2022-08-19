@@ -4,7 +4,9 @@
   "description": "",
   "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "format": "rome format . && rome check --apply . && prettier --write **/*.{json,yml,yaml,md}",
+    "lint": "rome ci .",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,24 @@
   "bugs": {
     "url": "https://github.com/koumatsumoto/loop/issues"
   },
-  "homepage": "https://github.com/koumatsumoto/loop#readme"
+  "homepage": "https://github.com/koumatsumoto/loop#readme",
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "rome": "^0.8.0-next.ff4153b"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "trailingComma": "all"
+  },
+  "lint-staged": {
+    "*.{json,yml,yaml,md}": [
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "rome format --write --indent-style space --line-width 120",
+      "rome check --apply"
+    ]
+  }
 }
