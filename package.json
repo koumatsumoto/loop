@@ -1,0 +1,19 @@
+{
+  "name": "loop",
+  "version": "0.1.0",
+  "description": "",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koumatsumoto/loop.git"
+  },
+  "keywords": [],
+  "author": "koumatsumoto",
+  "bugs": {
+    "url": "https://github.com/koumatsumoto/loop/issues"
+  },
+  "homepage": "https://github.com/koumatsumoto/loop#readme"
+}
