@@ -8,8 +8,10 @@
     "npm": ">= 8.6.0"
   },
   "scripts": {
-    "format": "rome format . && rome check --apply . && prettier --write **/*.{json,yml,yaml,md}",
+    "build": "tsc --noEmit",
+    "format": "rome format --write . && rome check --apply . && prettier --write **/*.{json,yml,yaml,md}",
     "lint": "rome ci .",
+    "test": "vitest run",
     "prepare": "husky install"
   },
   "repository": {
@@ -23,10 +25,14 @@
   },
   "homepage": "https://github.com/koumatsumoto/loop#readme",
   "devDependencies": {
+    "@tsconfig/node18-strictest": "^1.0.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
-    "rome": "^0.8.0-next.ff4153b"
+    "rome": "^0.8.0-next.ff4153b",
+    "typescript": "^4.9.0-dev.20220819",
+    "vite": "^3.0.9",
+    "vitest": "^0.22.1"
   },
   "prettier": {
     "printWidth": 120,
@@ -37,7 +43,7 @@
       "prettier --write"
     ],
     "*.{ts,tsx}": [
-      "rome format --write --indent-style space --line-width 120",
+      "rome format --write",
       "rome check --apply"
     ]
   }
